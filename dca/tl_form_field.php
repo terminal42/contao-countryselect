@@ -30,5 +30,5 @@
 /**
  * Palettes
  */
-$GLOBALS['TL_DCA']['tl_form_field']['palettes']['countryselect'] = '{type_legend},type,name,label;{fconfig_legend},mandatory,multiple;{expert_legend:hide},value,class,accesskey,tabindex;{submit_legend},addSubmit';
+$GLOBALS['TL_DCA']['tl_form_field']['palettes']['countryselect'] = '{type_legend},type,name,label;{fconfig_legend},mandatory,multiple,placeholder;{expert_legend:hide},value,class,accesskey,tabindex;{submit_legend},addSubmit';
 

@@ -33,7 +33,8 @@ class FormCountrySelectMenu extends FormSelectMenu
 	public function __set($strKey, $varValue)
 	{
 		switch ($strKey)
-		{			
+		{
+
 			case 'options':
 				break;
 				
@@ -46,7 +47,7 @@ class FormCountrySelectMenu extends FormSelectMenu
 	
 	public function generate()
 	{
-		$arrOptions = array(array('label'=>'-', 'value'=>''));
+		$arrOptions = array(array('label'=>($this->placeholder == '' ? '-' : $this->placeholder), 'value'=>''));
 		$arrCountries = $this->getCountries();
 		
 		foreach( $arrCountries as $short => $name )
