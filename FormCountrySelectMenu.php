@@ -34,30 +34,22 @@ class FormCountrySelectMenu extends FormSelectMenu
 	{
 		switch ($strKey)
 		{
-
 			case 'options':
+				$arrOptions = array(array('label'=>($this->placeholder == '' ? '-' : $this->placeholder), 'value'=>''));
+				$arrCountries = $this->getCountries();
+				
+				foreach( $arrCountries as $short => $name )
+				{
+					$arrOptions[] = array('label'=>$name, 'value'=>$short);
+				}
+				
+				$this->arrOptions = $arrOptions;
 				break;
 				
 			default:
 				parent::__set($strKey, $varValue);
 				break;
 		}
-	}
-	
-	
-	public function generate()
-	{
-		$arrOptions = array(array('label'=>($this->placeholder == '' ? '-' : $this->placeholder), 'value'=>''));
-		$arrCountries = $this->getCountries();
-		
-		foreach( $arrCountries as $short => $name )
-		{
-			$arrOptions[] = array('label'=>$name, 'value'=>$short);
-		}
-		
-		$this->arrOptions = $arrOptions;
-		
-		return parent::generate();
 	}
 }
 
