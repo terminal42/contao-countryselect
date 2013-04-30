@@ -22,12 +22,15 @@
  *
  * PHP version 5
  * @copyright  terminal42 gmbh 2009-2013
- * @author     Andreas Schempp <andreas.schempp@terminal42.ch>
+ * @author     Kamil Kuźmiński <kamil.kuzminski@terminal42.ch>
  * @license    http://opensource.org/licenses/lgpl-3.0.html
  */
 
 
 /**
- * Palettes
+ * Register the classes
  */
-$GLOBALS['TL_DCA']['tl_form_field']['palettes']['countryselect'] = '{type_legend},type,name,label;{fconfig_legend},mandatory,multiple,placeholder;{expert_legend:hide},value,class,accesskey,tabindex;{submit_legend},addSubmit';
+ClassLoader::addClasses(array
+(
+	'FormCountrySelectMenu'  => 'system/modules/countryselect/FormCountrySelectMenu.php'
+));
