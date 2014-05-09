@@ -21,35 +21,22 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  terminal42 gmbh 2009-2013
+ * @copyright  terminal42 gmbh 2009-2014
  * @author     Andreas Schempp <andreas.schempp@terminal42.ch>
  * @author     Kamil Kuźmiński <kamil.kuzminski@terminal42.ch>
  * @license    http://opensource.org/licenses/lgpl-3.0.html
  */
-
-
 class FormCountrySelectMenu extends FormSelectMenu
 {
+    public function addAttributes($arrAttributes)
+    {
+        parent::addAttributes($arrAttributes);
+        $arrOptions = array(array('label' => ($this->placeholder == '' ? '-' : $this->placeholder), 'value' => ''));
+        $arrCountries = $this->getCountries();
 
-	public function __set($strKey, $varValue)
-	{
-		switch ($strKey)
-		{
-			case 'options':
-				$arrOptions = array(array('label'=>($this->placeholder == '' ? '-' : $this->placeholder), 'value'=>''));
-				$arrCountries = $this->getCountries();
-
-				foreach( $arrCountries as $short => $name )
-				{
-					$arrOptions[] = array('label'=>$name, 'value'=>$short);
-				}
-
-				$this->arrOptions = $arrOptions;
-				break;
-
-			default:
-				parent::__set($strKey, $varValue);
-				break;
-		}
-	}
+        foreach ($arrCountries as $short => $name) {
+            $arrOptions[] = array('label' => $name, 'value' => $short);
+        }
+        $this->arrOptions = $arrOptions;
+    }
 }
