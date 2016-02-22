@@ -26,8 +26,7 @@
  * @license    http://opensource.org/licenses/lgpl-3.0.html
  */
 
-
 /**
- * Extendsion folder
+ * Form fields
  */
-$GLOBALS['TL_LANG']['MOD']['countryselect'] = array('Länder Select-Menü');
+$GLOBALS['TL_FFL']['countryselect'] = 'Terminal42\Form\CountrySelectMenu';

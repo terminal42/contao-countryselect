@@ -21,22 +21,12 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  terminal42 gmbh 2009-2014
+ * @copyright  terminal42 gmbh 2009-2013
  * @author     Andreas Schempp <andreas.schempp@terminal42.ch>
- * @author     Kamil Kuźmiński <kamil.kuzminski@terminal42.ch>
  * @license    http://opensource.org/licenses/lgpl-3.0.html
  */
-class FormCountrySelectMenu extends FormSelectMenu
-{
-    public function addAttributes($arrAttributes)
-    {
-        parent::addAttributes($arrAttributes);
-        $arrOptions = array(array('label' => ($this->placeholder == '' ? '-' : $this->placeholder), 'value' => ''));
-        $arrCountries = $this->getCountries();
 
-        foreach ($arrCountries as $short => $name) {
-            $arrOptions[] = array('label' => $name, 'value' => $short);
-        }
-        $this->arrOptions = $arrOptions;
-    }
-}
+/**
+ * Form fields
+ */
+$GLOBALS['TL_LANG']['FFL']['countryselect'] = array('Länder Select-Menü', 'zeigt ein Select-Menü mit allen bekannten Ländern zur Auswahl.');

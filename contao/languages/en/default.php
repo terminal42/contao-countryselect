@@ -22,15 +22,11 @@
  *
  * PHP version 5
  * @copyright  terminal42 gmbh 2009-2013
- * @author     Kamil Kuźmiński <kamil.kuzminski@terminal42.ch>
+ * @author     Andreas Schempp <andreas.schempp@terminal42.ch>
  * @license    http://opensource.org/licenses/lgpl-3.0.html
  */
 
-
 /**
- * Register the classes
+ * Form fields
  */
-ClassLoader::addClasses(array
-(
-	'FormCountrySelectMenu'  => 'system/modules/countryselect/FormCountrySelectMenu.php'
-));
+$GLOBALS['TL_LANG']['FFL']['countryselect'] = array('Country Select-Menu', 'shows a select menu containing all known countries');

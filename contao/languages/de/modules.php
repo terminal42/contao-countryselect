@@ -26,8 +26,7 @@
  * @license    http://opensource.org/licenses/lgpl-3.0.html
  */
 
-
 /**
- * Form fields
+ * Extendsion folder
  */
-$GLOBALS['TL_LANG']['FFL']['countryselect'] = array('Country Select-Menu', 'shows a select menu containing all known countries');
+$GLOBALS['TL_LANG']['MOD']['countryselect'] = array('Länder Select-Menü');
