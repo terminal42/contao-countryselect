@@ -26,8 +26,7 @@
  * @license    http://opensource.org/licenses/lgpl-3.0.html
  */
 
-
 /**
- * Form fields
+ * Palettes
  */
-$GLOBALS['TL_LANG']['FFL']['countryselect'] = array('Länder Select-Menü', 'zeigt ein Select-Menü mit allen bekannten Ländern zur Auswahl.');
+$GLOBALS['TL_DCA']['tl_form_field']['palettes']['countryselect'] = '{type_legend},type,name,label;{fconfig_legend},mandatory,multiple,placeholder;{expert_legend:hide},value,class,accesskey,tabindex;{submit_legend},addSubmit';
