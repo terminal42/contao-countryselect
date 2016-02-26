@@ -1,0 +1,25 @@
+{
+    "name":"terminal42/contao-countryselect",
+    "description":"Country select menu for Contao forms",
+    "keywords":["contao", "form", "country"],
+    "type":"contao-module",
+    "license":"LGPL-3.0+",
+    "authors":[
+        {
+            "name":"terminal42 gmbh",
+            "homepage":"https://www.terminal42.ch"
+        }
+    ],
+    "require":{
+        "php":">=5.3",
+        "contao/core-bundle": "~3.2 || ~4.1",
+        "contao-community-alliance/composer-plugin": "~2.4 || ~3.0"
+    },
+    "extra":{
+        "contao": {
+            "sources":{
+                "": "system/modules/countryselect"
+            }
+        }
+    }
+}
