@@ -24,13 +24,7 @@ class FormCountrySelectMenu extends FormSelectMenu
         }
 
         foreach ($arrCountries as $short => $name) {
-            $option = array('label' => $name, 'value' => $short);
-
-            if($this->varValue === $short) {
-                $option['default'] = true;
-            }
-
-            $arrOptions[] = $option;
+            $arrOptions[] = array('label' => $name, 'value' => $short);
         }
 
         $this->arrOptions = $arrOptions;
