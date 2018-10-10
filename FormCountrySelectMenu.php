@@ -23,9 +23,23 @@ class FormCountrySelectMenu extends FormSelectMenu
             $this->varValue = \Controller::replaceInsertTags($this->value);
         }
 
+        // Support for important countries
+        $importantCountries = [];
+        if ($this->countryselect_important) {
+            foreach (explode(',', $this->countryselect_important) as $short) {
+                $importantCountries[$short] = $countries[$short];
+                $options[] = ['label' => $countries[$short], 'value' => $short];
+            }
+
+            $options[] = ['label' => '---', 'value' => ''];
         }
 
         foreach ($countries as $short => $name) {
+
+            if (isset($importantCountries[$short])) {
+                continue;
+            }
+
             $options[] = ['label' => $name, 'value' => $short];
         }
 
