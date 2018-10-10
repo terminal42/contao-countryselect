@@ -10,6 +10,6 @@
  */
 
 /**
- * Extendsion folder
+ * Fields
  */
-$GLOBALS['TL_LANG']['MOD']['countryselect'] = array('Länder Select-Menü');
+$GLOBALS['TL_LANG']['tl_form_field']['countryselect_important'] = ['Important countries', 'The selected countries are going to be listed above all the other countries in the order they were selected here.'];
