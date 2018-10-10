@@ -16,10 +16,17 @@ class FormCountrySelectMenu extends FormSelectMenu
         parent::addAttributes($arrAttributes);
         $arrOptions = array(array('label' => ($this->placeholder == '' ? '-' : $this->placeholder), 'value' => ''));
         $arrCountries = $this->getCountries();
+        
+        // allow insert tags to be set as default value, e.g. {{user::country}}
+        // see https://github.com/terminal42/contao-countryselect/issues/6
+        if (strpos($this->varValue, '{{') !== false) {
+            $this->varValue = \Contao\Controller::replaceInsertTags($this->value);
+        }
 
         foreach ($arrCountries as $short => $name) {
             $arrOptions[] = array('label' => $name, 'value' => $short);
         }
+
         $this->arrOptions = $arrOptions;
     }
 }
