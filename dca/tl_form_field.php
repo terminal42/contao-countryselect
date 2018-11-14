@@ -12,7 +12,7 @@
 /**
  * Palettes
  */
-$GLOBALS['TL_DCA']['tl_form_field']['palettes']['countryselect'] = '{type_legend},type,name,label;{fconfig_legend},mandatory,multiple,placeholder,countryselect_important;{expert_legend:hide},value,class,accesskey,tabindex;{submit_legend},addSubmit';
+$GLOBALS['TL_DCA']['tl_form_field']['palettes']['countryselect'] = '{type_legend},type,name,label;{fconfig_legend},mandatory,multiple,placeholder,countryselect_important;{expert_legend:hide},value,class,accesskey,tabindex;{template_legend:hide},customTpl;{submit_legend},addSubmit';
 
 /**
  * Fields
