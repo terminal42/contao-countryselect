@@ -17,7 +17,12 @@ class FormCountrySelectMenu extends FormSelectMenu
 
         $options = [['label' => ($this->placeholder == '' ? '-' : $this->placeholder), 'value' => '']];
         $countries = \System::getCountries();
-        
+
+        // Exclude some countries
+        if ($this->countryselect_exclude) {
+            $countries = array_diff_key($countries, array_flip(explode(',', $this->countryselect_exclude)));
+        }
+
         // Replace insert tags
         if (strpos($this->varValue, '{{') !== false) {
             $this->varValue = \Controller::replaceInsertTags($this->value);
@@ -27,11 +32,15 @@ class FormCountrySelectMenu extends FormSelectMenu
         $importantCountries = [];
         if ($this->countryselect_important) {
             foreach (explode(',', $this->countryselect_important) as $short) {
-                $importantCountries[$short] = $countries[$short];
-                $options[] = ['label' => $countries[$short], 'value' => $short];
+                if (isset($countries[$short])) {
+                    $importantCountries[$short] = $countries[$short];
+                    $options[] = ['label' => $countries[$short], 'value' => $short];
+                }
             }
 
-            $options[] = ['label' => '---', 'value' => ''];
+            if (count($importantCountries) > 0) {
+                $options[] = ['label' => '---', 'value' => ''];
+            }
         }
 
         foreach ($countries as $short => $name) {
