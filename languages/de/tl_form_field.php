@@ -13,3 +13,4 @@
  * Fields
  */
 $GLOBALS['TL_LANG']['tl_form_field']['countryselect_important'] = ['Wichtige Länder', 'Die hier ausgewählten Länder werden in der Reihenfolge in der sie hier eingegeben wurden in der Auswahl zuoberst aufgeführt.'];
+$GLOBALS['TL_LANG']['tl_form_field']['countryselect_exclude']   = ['Länder ausschließen', 'Die hier ausgewählten Länder werden von der Liste ausgeschlossen.'];
