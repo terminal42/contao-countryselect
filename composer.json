@@ -1,25 +1,52 @@
 {
-    "name":"terminal42/contao-countryselect",
-    "description":"Country select menu for Contao forms",
-    "keywords":["contao", "form", "country"],
-    "type":"contao-module",
-    "license":"LGPL-3.0+",
-    "authors":[
+    "name": "terminal42/contao-countryselect",
+    "type": "contao-bundle",
+    "description": "Country select menu for Contao forms",
+    "keywords": ["contao", "form", "country"],
+    "license": "MIT",
+    "authors": [
         {
-            "name":"terminal42 gmbh",
-            "homepage":"https://www.terminal42.ch"
+            "name": "terminal42 gmbh",
+            "homepage": "https://www.terminal42.ch"
         }
     ],
-    "require":{
-        "php":">=5.3",
-        "contao/core-bundle": "~3.2 || ~4.1",
-        "contao-community-alliance/composer-plugin": "~2.4 || ~3.0"
-    },
-    "extra":{
-        "contao": {
-            "sources":{
-                "": "system/modules/countryselect"
-            }
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/terminal42"
+        },
+        {
+            "type": "other",
+            "url": "https://ko-fi.com/terminal42"
         }
+    ],
+    "support": {
+        "issues": "https://github.com/terminal42/contao-countryselect/issues",
+        "source": "https://github.com/terminal42/contao-countryselect",
+        "forum": "https://community.contao.org"
+    },
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "contao/core-bundle": "^4.13 || ^5.0",
+        "symfony/polyfill-php80": "*"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0",
+        "contao/core-bundle": "^4.13"
+    },
+    "conflict": {
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Terminal42\\CountryselectBundle\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "Terminal42\\CountryselectBundle\\ContaoManager\\Plugin"
+    },
+    "scripts": {
+        "cs-fixer": "@php tools/ecs/vendor/bin/ecs check src/ --config tools/ecs/config.php --fix --ansi",
+        "rector": "@php tools/rector/vendor/bin/rector --config tools/rector/config.php --ansi"
     }
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+    <file datatype="php" original="contao/languages/en/tl_form_field.php" source-language="en">
+        <body>
+            <trans-unit id="tl_form_field.countryselect_important.0">
+                <source>Important countries</source>
+            </trans-unit>
+            <trans-unit id="tl_form_field.countryselect_important.1">
+                <source>The selected countries are going to be listed above all the other countries in the order they were selected here.</source>
+            </trans-unit>
+            <trans-unit id="tl_form_field.countryselect_exclude.0">
+                <source>Excluded countries</source>
+            </trans-unit>
+            <trans-unit id="tl_form_field.countryselect_exclude.1">
+                <source>The selected countries are going to be excluded from the list.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

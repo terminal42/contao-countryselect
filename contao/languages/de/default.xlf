@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+    <file datatype="php" original="contao/languages/en/default.php" source-language="en" target-language="de">
+        <body>
+            <trans-unit id="FFL.countryselect.0">
+                <source>Country Select-Menu</source>
+                <target>Länder Select-Menü</target>
+            </trans-unit>
+            <trans-unit id="FFL.countryselect.1">
+                <source>Shows a select menu containing all known countries.</source>
+                <target>Zeigt ein Select-Menü mit allen bekannten Ländern zur Auswahl.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
