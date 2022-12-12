@@ -59,4 +59,16 @@ class FormCountrySelect extends FormSelect
 
         $this->arrOptions = $options;
     }
+
+    /**
+     * Override method to disable the separator option
+     */
+    protected function isSelected($arrOption)
+    {
+        if ('' === ($arrOption['value'] ?? null) && '---' === ($arrOption['label'] ?? null)) {
+            return ' disabled';
+        }
+
+        return parent::isSelected($arrOption);
+    }
 }
