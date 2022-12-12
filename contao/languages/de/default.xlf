@@ -10,6 +10,10 @@
                 <source>Shows a select menu containing all known countries.</source>
                 <target>Zeigt ein Select-Menü mit allen bekannten Ländern zur Auswahl.</target>
             </trans-unit>
+            <trans-unit id="ERR.countryselect_important">
+                <source>Invalid input: %s</source>
+                <target>Ungültige Eingabe: %s</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

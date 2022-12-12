@@ -8,6 +8,9 @@
             <trans-unit id="FFL.countryselect.1">
                 <source>Shows a select menu containing all known countries.</source>
             </trans-unit>
+            <trans-unit id="ERR.countryselect_important">
+                <source>Invalid input: %s</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

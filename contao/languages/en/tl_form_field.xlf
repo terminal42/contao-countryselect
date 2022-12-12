@@ -6,7 +6,7 @@
                 <source>Important countries</source>
             </trans-unit>
             <trans-unit id="tl_form_field.countryselect_important.1">
-                <source>The selected countries are going to be listed above all the other countries in the order they were selected here.</source>
+                <source>Enter a comma-separated list of country codes that should be listed above all the other countries in the order they were entered here.</source>
             </trans-unit>
             <trans-unit id="tl_form_field.countryselect_exclude.0">
                 <source>Excluded countries</source>
