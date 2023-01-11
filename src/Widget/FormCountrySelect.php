@@ -29,7 +29,7 @@ class FormCountrySelect extends FormSelect
         }
 
         // Replace insert tags
-        if (str_contains($this->varValue, '{{')) {
+        if (str_contains($this->varValue ?? '', '{{')) {
             $this->varValue = System::getContainer()->get('contao.insert_tag.parser')->parse($this->varValue);
         }
 
