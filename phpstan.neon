@@ -1,0 +1,6 @@
+parameters:
+    ignoreErrors:
+        - '#no value type specified in iterable type#'
+        - '#Class Contao\\FormSelectMenu not found#'
+        - '#Access to an undefined property Terminal42\\CountryselectBundle\\Widget\\FormCountrySelect::\$countryselect_exclude#'
+        - '#Access to an undefined property Terminal42\\CountryselectBundle\\Widget\\FormCountrySelect::\$countryselect_important#'

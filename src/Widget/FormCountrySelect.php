@@ -61,7 +61,7 @@ class FormCountrySelect extends FormSelect
     }
 
     /**
-     * Override method to disable the separator option
+     * Override method to disable the separator option.
      */
     protected function isSelected($arrOption)
     {

@@ -14,6 +14,7 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class CountryValidationListener
 {
     private Countries $countries;
+
     private TranslatorInterface $translator;
 
     public function __construct(Countries $countries, TranslatorInterface $translator)
@@ -22,6 +23,11 @@ class CountryValidationListener
         $this->translator = $translator;
     }
 
+    /**
+     * @param mixed|string $value
+     *
+     * @return mixed|string
+     */
     public function __invoke($value)
     {
         if (empty($value) || !\is_string($value)) {
